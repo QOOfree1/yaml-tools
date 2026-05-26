@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a2e;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-surface: #f9fafb;
+  --color-accent: #2563eb;
+  --color-error: #dc2626;
+  --color-success: #16a34a;
+}
+
+body {
+  @apply bg-[var(--color-bg)] text-[var(--color-text)] font-sans antialiased;
+}
+
+pre,
+code,
+textarea.code-editor {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+.code-editor {
+  @apply w-full min-h-[400px] p-4 text-sm leading-relaxed bg-[var(--color-surface)]
+         border border-[var(--color-border)] rounded-lg resize-y
+         focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent;
+}
+
+.tool-panel {
+  @apply flex-1 flex flex-col;
+}
+
+.tool-label {
+  @apply text-xs font-semibold uppercase tracking-wider text-[var(--color-muted)] mb-2;
+}
+
+.btn {
+  @apply px-4 py-2 text-sm font-medium rounded-md transition-colors
+         border border-[var(--color-border)] hover:bg-[var(--color-surface)]
+         focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)];
+}
+
+.btn-primary {
+  @apply px-4 py-2 text-sm font-medium rounded-md transition-colors
+         bg-[var(--color-accent)] text-white border-transparent
+         hover:bg-blue-700
+         focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)];
+}
